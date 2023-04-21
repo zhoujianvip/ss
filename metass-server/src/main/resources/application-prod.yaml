@@ -47,8 +47,8 @@ spring:
           name: ss_admin
           url: jdbc:mysql://mysql.cn2.ltd:3306/${spring.datasource.dynamic.datasource.master.name}?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
  
-          username: metass
-          password: Zhou4jian4@
+          username: vtea
+          password: Zhou4jian4@mysql
 
   # Redis 配置。Redisson 默认的配置足够使用，一般不需要进行调优
   redis:
