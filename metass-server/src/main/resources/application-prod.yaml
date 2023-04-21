@@ -45,18 +45,17 @@ spring:
       datasource:
         master:
           name: ss_admin
-          url: jdbc:mysql://mysql.cn2.ltd:3306/${spring.datasource.dynamic.datasource.master.name}?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true # MySQL Connector/J 8.X 连接的示例
+          url: jdbc:mysql://mysql.cn2.ltd:3306/${spring.datasource.dynamic.datasource.master.name}?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
  
           username: metass
           password: Zhou4jian4@
-
 
   # Redis 配置。Redisson 默认的配置足够使用，一般不需要进行调优
   redis:
     host: 127.0.0.1 # 地址
     port: 6379 # 端口
     database: 0 # 数据库索引
-   # password: rgPt1hBdqPtYJ0acpnfdmWbSHt09kH5T # 密码，建议生产环境开启
+  # password: rgPt1hBdqPtYJ0acpnfdmWbSHt09kH5T # 密码，建议生产环境开启
 
 --- #################### 定时任务相关配置 ####################
 
@@ -215,3 +214,6 @@ justauth:
     prefix: 'social_auth_state:' # 缓存前缀，目前只对 Redis 缓存生效，默认 JUSTAUTH::STATE::
     timeout: 24h # 超时时长，目前只对 Redis 缓存生效，默认 3 分钟
 
+spring:
+  main:
+    allow-bean-definition-overriding: true
