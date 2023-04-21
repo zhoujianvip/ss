@@ -44,9 +44,8 @@ spring:
       primary: master
       datasource:
         master:
-          name: ss_admin
+          name: metass
           url: jdbc:mysql://mysql.cn2.ltd:3306/${spring.datasource.dynamic.datasource.master.name}?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
- 
           username: vtea
           password: Zhou4jian4@mysql
 
@@ -89,6 +88,11 @@ spring:
       initialize-schema: NEVER # 是否自动使用 SQL 初始化 Quartz 表结构。这里设置成 never ，我们手动创建表结构。
 
 --- #################### 服务保障相关配置 ####################
+
+spring:
+    main:
+        allow-bean-definition-overriding: true
+
 
 # Lock4j 配置项
 lock4j:
