@@ -84,7 +84,7 @@ public class MetassSwaggerAutoConfiguration {
 
     /**
      * 自定义 OpenAPI 处理器
-    
+    */
     @Bean
     public OpenAPIService openApiBuilder(Optional<OpenAPI> openAPI,
                                          SecurityService securityParser,
@@ -97,7 +97,7 @@ public class MetassSwaggerAutoConfiguration {
         return new OpenAPIService(openAPI, securityParser, springDocConfigProperties,
                 propertyResolverUtils, openApiBuilderCustomizers, serverBaseUrlCustomizers, javadocProvider);
     }
-	 */
+	 
     // ========== 分组 OpenAPI 配置 ==========
 
     /**
